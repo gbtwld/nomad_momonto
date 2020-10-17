@@ -14,7 +14,6 @@ function getWeather(lat, lng) {
       const temperature = json.main.temp;
       const currentWeather = json.weather[0].main;
       const place = json.name;
-      console.log(json.weather[0].icon);
       weather.innerHTML = `${place}'s weather!<br>${temperature} ºC and ${currentWeather}!`;
     });
 }
