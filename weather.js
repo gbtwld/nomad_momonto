@@ -5,8 +5,8 @@ const COORDS = "coords";
 
 function getWeather(lat, lng) {
   fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
-    )
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+  )
     .then(function (response) {
       return response.json();
     })
@@ -14,7 +14,7 @@ function getWeather(lat, lng) {
       const temperature = json.main.temp;
       const currentWeather = json.weather[0].main;
       const place = json.name;
-      weather.innerHTML = `${place}'s weather!<br>${temperature} ºC and ${currentWeather}!`;
+      weather.innerHTML = `☀️${place}'s weather🌧<br>${temperature} ºC and ${currentWeather}!`;
     });
 }
 
